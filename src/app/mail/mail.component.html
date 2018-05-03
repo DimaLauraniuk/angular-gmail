@@ -1,29 +1,42 @@
-<div class="Mail">
-  <div class="leftMenu">
-    <div class="writeMessage">
-      <button class="messagebtn">Write</button>
-      <br>
-      <br>
-    </div>
+<div class="Mail" fxLayout="row" fxLayoutAlign="start stretch">
+  <div class="leftMenu" fxFlex="10%">
     <div class="menu">
-      <input class="incoming" value="Incoming" readonly/>
-      <br>
-      <br>
-      <input class="marked" value="Marked" readonly/>
-      <br>
-      <br>
-      <input class="important" value="Important" readonly/>
-      <br>
-      <br>
-      <input class="sent" value="Sent" readonly/>
+      <mat-toolbar>
+        <mat-toolbar-row>
+          <button mat-button class="messagebtn">Write</button>
+        </mat-toolbar-row>
+        <mat-toolbar-row>
+          <button mat-button class="incoming">Incoming</button>
+        </mat-toolbar-row>
+        <mat-toolbar-row>
+          <button mat-button class="marked">Marked</button>
+        </mat-toolbar-row>
+        <mat-toolbar-row>
+          <button mat-button class="important">Important</button>
+        </mat-toolbar-row>
+        <mat-toolbar-row>
+          <button mat-button class="sent">Sent</button>
+        </mat-toolbar-row>
+      </mat-toolbar>
     </div>
   </div>
   <div class="messages">
-    <input value="Messages list">
-    <app-singlemail messageSender='Alex' messageText='first email' messageDate='28.03.2018'></app-singlemail>
-    <app-singlemail messageSender='Dima' messageText='second email' messageDate='27.02.2018'></app-singlemail>
-    <app-singlemail messageSender='Sam' messageText='test email' messageDate='24.01.2018'></app-singlemail>
-    <app-singlemail messageSender='Olga' messageText='some email' messageDate='25.06.2018'></app-singlemail>
-    <app-singlemail messageSender='Artem' messageText='third email' messageDate='26.05.2018'></app-singlemail>
+    <mat-list role="list">
+      <mat-list-item role="listitem">
+        <app-singlemail messageSender='Alex' messageText='first email' messageDate='28.03.2018'></app-singlemail>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <app-singlemail messageSender='Dima' messageText='second email' messageDate='27.02.2018'></app-singlemail>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <app-singlemail messageSender='Sam' messageText='test email' messageDate='24.01.2018'></app-singlemail>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <app-singlemail messageSender='Olga' messageText='some email' messageDate='25.06.2018'></app-singlemail>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <app-singlemail messageSender='Artem' messageText='third email' messageDate='26.05.2018'></app-singlemail>
+      </mat-list-item>
+    </mat-list>
   </div>
 </div>

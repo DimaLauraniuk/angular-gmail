@@ -1,6 +1,20 @@
-<div class="message">
-  <input class="messageCheckbox" type="checkbox"/>
-  <input class="messageSender" value={{messageSender}}/>
-  <input class="messageText" value={{messageText}}/>
-  <input class="messageDate" value={{messageDate}}/>
+<div class="message" fxLayout="row" fxLayoutAlign="space-around center"  fxLayoutGap="20px">
+  <div>
+    <mat-checkbox></mat-checkbox>
+  </div>
+  <div>
+    <mat-form-field class="example-full-width">
+      <input id="messageSender" matInput value={{messageSender}}>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="example-full-width">
+      <input id="messageText" matInput value={{messageText}}>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="example-full-width">
+      <input id="messageDate" matInput value={{messageDate}}>
+    </mat-form-field>
+  </div>
 </div>

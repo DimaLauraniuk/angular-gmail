@@ -1,14 +1,34 @@
-<div class="mailHeader">
-    <button class="dropbtn">Gmail</button>
-    <input id="Filter" value="Type here to filter"/>
-    <button class="allbtn"><input type="checkbox"/>All</button>
-    <button class="archivebtn">Archive</button>
-    <button class="spambtn">Add to spam</button>
-    <button class="removebtn">Remove</button>
-    <button class="moveTobtn">Move to folder</button>
-    <button class="tagbtn">Give tag</button>
-    <button class="updateMailList">Update mail list</button>
-    <input class="mailCount" value="1-50 from 100"/>
-    <button class="prevbtn">Prev</button>
-    <button class="nextbtn">Next</button>
+<div class="mailHeader" fxLayout="row" fxLayoutAlign=" center">
+    <div>
+        <button mat-button class="dropbtn" [matMenuTriggerFor]="menu">Gmail</button>
+    </div>
+    <div>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>Gmail</button>
+            <button mat-menu-item>Contacts</button>
+        </mat-menu>
+    </div>
+    <div>
+        <mat-form-field class="example-full-width">
+            <input id="Filter" matInput placeholder="Type here to filter">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-checkbox>All</mat-checkbox>
+    </div>
+    <div>
+        <button mat-button class="archivebtn">Archive</button>
+    </div>
+    <div>
+        <button mat-button class="spambtn">Add to spam</button>
+    </div>
+    <div>
+        <button mat-button class="removebtn">Remove</button>
+    </div>
+    <div>
+        <button mat-button class="updateMailList">Update mail list</button>
+    </div>
+    <div>
+        <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+    </div>
 </div>

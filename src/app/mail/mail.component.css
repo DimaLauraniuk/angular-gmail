@@ -4,13 +4,3 @@ input {
 .leftMenu{
     float: left;
 }
-.leftMenu:after {
-  content: "";
-  background-color: #000;
-  position: absolute;
-  width: 1px;
-  height: 200px;
-  top: 42px;
-  left: 8%;
-  display: block;
-}
